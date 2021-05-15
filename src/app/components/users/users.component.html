@@ -1,0 +1,32 @@
+
+    <ul class="the-list">
+        <li *ngFor="let user of users;index as i">
+            <div class="info">
+            <span class="name">{{user.employee_name}}</span>
+            <span class="salary">{{user.employee_salary}}</span>
+            <span class="age">{{user.employee_age}}</span>
+        </div>
+        <div class="buttons-grp">
+            <button (click)="selectUser.emit(user)" class="select-button">Select</button>
+            <button (click)="selectUser2.emit(user)" class="select2-button">Select2</button>
+            <button (click)="postRequest.emit(user)" class="post-button">Post</button>
+            <!-- <button (click)="testClick('hola')">Select</button> -->
+        </div>
+        </li>
+    </ul>
+<hr>
+    <ul class="the-list">
+        <li *ngFor="let user of usersStoreList;index as i">
+            <div class="info">
+            <span class="name">{{user.employee_name}}</span>
+            <span class="salary">{{user.employee_salary}}</span>
+            <span class="age">{{user.employee_age}}</span>
+        </div>
+        <div class="buttons-grp">
+          
+            <button (click)="selectUser2.emit(user)" class="select2-button">Select</button>
+          
+            <!-- <button (click)="testClick('hola')">Select</button> -->
+        </div>
+        </li>
+    </ul>
